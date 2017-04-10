@@ -10,13 +10,15 @@ import { TemplateDrivenDemoComponent } from './template-driven/template-driven-d
 import {appRouting} from "./app.routing";
 import { IndexComponent } from './index.component';
 import { TemplateDrivenUpdateDemoComponent } from './template-driven/template-driven-update-demo.component';
+import { ReactiveFormDemoComponent } from './reactive/reactive-form-demo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TemplateDrivenDemoComponent,
     IndexComponent,
-    TemplateDrivenUpdateDemoComponent
+    TemplateDrivenUpdateDemoComponent,
+    ReactiveFormDemoComponent
   ],
   imports: [
     BrowserModule,
