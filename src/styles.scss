@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+form > div { margin-bottom: 10px; }
+
+form {
+
+  max-width: 500px;
+
+  label { font-size: 14px; font-weight: normal; display: block; }
+
+  input {
+     font-size: 16px;
+      border-radius: 4px;
+      width: 100%;
+  }
+
+  button { font-size: 16px; border-radius: 4px; }
+
+
+}
