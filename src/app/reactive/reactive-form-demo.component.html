@@ -1,10 +1,16 @@
 <h1>Add Customer</h1>
 
 <form [formGroup]="form" (ngSubmit)="addCustomer()">
-    <div><label>First Name</label><input type="text" formControlName="firstName" required/></div>
+    <div>
+        <label>First Name</label>
+        <input type="text" formControlName="firstName" required/>
+        <div *ngIf="form.get('firstName').touched && form.get('firstName').valid == false" class="error">
+            First name is required
+        </div>
+    </div>
     <div><label>Last Name</label><input type="text" formControlName="lastName" required/></div>
     <div><label>Email</label><input type="text" formControlName="email" required/></div>
 
-    <button>Save</button>
+    <button [disabled]="!form.valid" >Save</button>
 
 </form>
