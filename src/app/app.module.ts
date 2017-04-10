@@ -9,12 +9,14 @@ import { AppComponent } from './app.component';
 import { TemplateDrivenDemoComponent } from './template-driven/template-driven-demo.component';
 import {appRouting} from "./app.routing";
 import { IndexComponent } from './index.component';
+import { TemplateDrivenUpdateDemoComponent } from './template-driven/template-driven-update-demo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TemplateDrivenDemoComponent,
-    IndexComponent
+    IndexComponent,
+    TemplateDrivenUpdateDemoComponent
   ],
   imports: [
     BrowserModule,
