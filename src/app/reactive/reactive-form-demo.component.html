@@ -8,9 +8,26 @@
             First name is required
         </div>
     </div>
-    <div><label>Last Name</label><input type="text" formControlName="lastName" required/></div>
-    <div><label>Email</label><input type="text" formControlName="email" required/></div>
+    <div><label>Last Name</label>
+        <input type="text" formControlName="lastName" required/>
+        <div *ngIf="form.get('lastName').touched && form.get('lastName').valid == false" class="error">
+            Last name is required
+        </div>
+    </div>
+    <div><label>Email</label>
+        <input type="text" formControlName="email" required/>
+        <div *ngIf="form.get('email').touched && form.get('email').errors && form.get('email').errors.required" class="error">
+            Email address is required
+        </div>
+        <div *ngIf="form.get('email').touched && form.get('email').errors && form.get('email').errors.email" class="error">
+            Email address is invalid
+        </div>
+    </div>
 
     <button [disabled]="!form.valid" >Save</button>
+
+    <p>
+        Email: {{form.get('email').errors | json }}
+    </p>
 
 </form>
