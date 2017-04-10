@@ -1,16 +1,15 @@
 
 <h1>Add Customer</h1>
 
-<form>
-    <div><label>First Name</label><input type="text" name="firstName" required/></div>
-    <div><label>Last Name</label><input type="text" name="lastName" required/></div>
-    <div><label>Email</label><input type="text" name="email" required/></div>
-    <div><label>Address1</label><input type="text" name="address1" required/></div>
-    <div><label>Address2</label><input type="text" name="address2"/></div>
-    <div><label>City</label><input type="text" name="city" required/></div>
-    <div><label>State</label><input type="text" name="state" required/></div>
-    <div><label>Zip</label><input type="text" name="zip" required/></div>
+<form #f="ngForm" (ngSubmit)="addCustomer(f.value)">
+    <div><label>First Name</label><input #spy type="text" name="firstName" ngModel required/></div>
+    <div><label>Last Name</label><input type="text" name="lastName" ngModel required/></div>
+    <div><label>Email</label><input type="text" name="email" ngModel required/></div>
 
-    <button>Save</button>
+    <button [disabled]="!f.valid">Save</button>
+
+    <p>
+        Spy: {{spy.className}}
+    </p>
 
 </form>
