@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TemplateDrivenUpdateDemoComponent implements OnInit {
 
+  customer = { firstName: 'Bob', lastName: 'Smith', email: 'bob@smith.com '};
+
   constructor() { }
 
   ngOnInit() {
   }
+
+    updateCustomer() {
+      alert('success');
+    }
+
 
 }
