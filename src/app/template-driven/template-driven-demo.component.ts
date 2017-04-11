@@ -12,4 +12,11 @@ export class TemplateDrivenDemoComponent implements OnInit {
   ngOnInit() {
   }
 
+  addCustomer(customer) {
+
+      alert('success');
+
+  }
+
+
 }

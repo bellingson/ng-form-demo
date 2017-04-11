@@ -6,14 +6,13 @@
     <div><label>Email</label><input type="text" name="email" [(ngModel)]="customer.email" required/></div>
 
     <button [disabled]="!f.valid">Save</button>
-
-
-    <p>
-        Form Value: {{f.value | json}}
-    </p>
-
-    <p>
-        Customer Value: {{customer | json}}
-    </p>
-
+    
 </form>
+
+<p>
+    Form Value: {{f.value | json }}
+</p>
+
+<p>
+    Customer Value: {{customer | json}}
+</p>
