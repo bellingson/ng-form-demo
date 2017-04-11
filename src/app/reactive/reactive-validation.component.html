@@ -1,33 +1,47 @@
-<h1>Add Customer</h1>
+<h1>Add Customer with Validation</h1>
 
-<form [formGroup]="form" (ngSubmit)="addCustomer()">
+<form [formGroup]="form" (ngSubmit)="addCustomer()" novalidate>
     <div>
         <label>First Name</label>
         <input type="text" formControlName="firstName" required/>
-        <div *ngIf="form.get('firstName').touched && form.get('firstName').valid == false" class="error">
+        <div *ngIf="form.get('firstName').touched && form.get('firstName').errors?.required" class="error">
             First name is required
         </div>
     </div>
     <div><label>Last Name</label>
         <input type="text" formControlName="lastName" required/>
-        <div *ngIf="form.get('lastName').touched && form.get('lastName').valid == false" class="error">
+        <div *ngIf="form.get('lastName').touched && form.get('lastName').errors?.required" class="error">
             Last name is required
         </div>
     </div>
     <div><label>Email</label>
         <input type="text" formControlName="email" required/>
-        <div *ngIf="form.get('email').touched && form.get('email').errors && form.get('email').errors.required" class="error">
+        <div *ngIf="form.get('email').touched && form.get('email').errors?.required" class="error">
             Email address is required
         </div>
-        <div *ngIf="form.get('email').touched && form.get('email').errors && form.get('email').errors.email" class="error">
+        <div *ngIf="form.get('email').touched && form.get('email').errors?.email" class="error">
             Email address is invalid
         </div>
     </div>
 
     <div><label>Password</label>
         <input type="password" formControlName="password" required/>
+        <div *ngIf="form.get('password').touched && form.get('password').errors?.required" class="error">
+            Password is required
+        </div>
+        <div *ngIf="form.get('password').touched && form.get('password').errors?.tooshort" class="error">
+            Password is too short
+        </div>
+
     </div>
 
+    <div><label>Confirm</label>
+        <input type="password" formControlName="confirm" required/>
+        <div *ngIf="form.get('confirm').touched && form.get('confirm').errors?.nomatch" class="error">
+            Passwords do not match
+        </div>
+    </div>    
+    
 
     <button [disabled]="!form.valid" >Save</button>
 
@@ -35,5 +49,5 @@
 
 
 <p>
-    Email: {{form.get('email').errors | json }}
+    Form: {{form.value | json }}
 </p>

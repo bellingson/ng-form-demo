@@ -1,3 +1,22 @@
-<p>
-  reactive-value-changes works!
-</p>
+<h1>Customers</h1>
+
+<form>
+    <input [formControl]="q" type="text" name="q" placeholder="Search.."/>
+</form>
+
+<table class="table table-striped table-hover">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let c of customers">
+        <td>{{c.id}}</td>
+        <td>{{c.name}}</td>
+        <td>{{c.email}}</td>
+    </tr>
+    </tbody>
+</table>

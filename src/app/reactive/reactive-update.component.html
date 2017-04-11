@@ -1,3 +1,23 @@
+<h1>Update Customer</h1>
+
+<form [formGroup]="form" (ngSubmit)="updateCustomer()" novalidate>
+    <div>
+        <label>First Name</label>
+        <input type="text" formControlName="firstName" />
+    </div>
+    <div><label>Last Name</label>
+        <input type="text" formControlName="lastName" />
+    </div>
+    <div><label>Email</label>
+        <input type="text" formControlName="email" />
+
+    </div>
+
+    <button [disabled]="!form.valid" >Save</button>
+
+</form>
+
+
 <p>
-  reactive-update works!
+    Form: {{form.value | json }}
 </p>
