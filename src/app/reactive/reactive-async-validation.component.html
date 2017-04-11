@@ -1,0 +1,18 @@
+
+<h3>Enter Your Discount Code</h3>
+
+<p>
+    The valid code is "abc"
+</p>
+
+
+<form [formGroup]="form">
+    
+    <input class="discount-code" #spy type="text" formControlName="discountCode"/>
+
+    <span *ngIf="form.get('discountCode').dirty && form.get('discountCode').valid" class="glyphicon glyphicon-ok"></span>
+    <span *ngIf="form.get('discountCode').dirty && form.get('discountCode').valid == false" class="glyphicon glyphicon-remove"></span>
+
+
+</form>
+
