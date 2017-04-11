@@ -15,6 +15,7 @@ import { ReactiveUpdateComponent } from './reactive/reactive-update.component';
 import { ReactiveValidationComponent } from './reactive/reactive-validation.component';
 import { ReactiveValueChangesComponent } from './reactive/reactive-value-changes.component';
 import { InputDemoComponent } from './input/input-demo.component';
+import { InputListDemoComponent } from './input/input-list-demo.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { InputDemoComponent } from './input/input-demo.component';
     ReactiveUpdateComponent,
     ReactiveValidationComponent,
     ReactiveValueChangesComponent,
-    InputDemoComponent
+    InputDemoComponent,
+    InputListDemoComponent
   ],
   imports: [
     BrowserModule,

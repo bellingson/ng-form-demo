@@ -10,11 +10,13 @@ form {
 
   label { font-size: 14px; font-weight: normal; display: block; }
 
-  input {
+  input, select {
      font-size: 16px;
       border-radius: 4px;
       width: 100%;
   }
+
+  h3 { font-size: 16px; }
 
   button { font-size: 16px; border-radius: 4px; }
 
@@ -23,6 +25,14 @@ form {
   }
 
 
+  div.checkbox {
+    input, input[type='radio'] { diplay: inline !important; }
+    margin-bottom: 10px;
+  }
+
+  div.radio {
+     input { display: inline; }
+  }
 
 
 }

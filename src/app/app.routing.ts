@@ -6,6 +6,8 @@ import {ReactiveFormDemoComponent} from "./reactive/reactive-form-demo.component
 import {ReactiveUpdateComponent} from "./reactive/reactive-update.component";
 import {ReactiveValidationComponent} from "./reactive/reactive-validation.component";
 import {ReactiveValueChangesComponent} from "./reactive/reactive-value-changes.component";
+import {InputDemoComponent} from "./input/input-demo.component";
+import {InputListDemoComponent} from "./input/input-list-demo.component";
 
 const routes: Routes = [
     { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -15,7 +17,9 @@ const routes: Routes = [
     { path: 'reactive-demo', component: ReactiveFormDemoComponent },
     { path: 'reactive-update', component: ReactiveUpdateComponent },
     { path: 'reactive-validation', component: ReactiveValidationComponent },
-    { path: 'reactive-value-changes', component: ReactiveValueChangesComponent }
+    { path: 'reactive-value-changes', component: ReactiveValueChangesComponent },
+    { path: 'input-demo', component: InputDemoComponent },
+    { path: 'input-list-demo', component: InputListDemoComponent }
 
 ];
 

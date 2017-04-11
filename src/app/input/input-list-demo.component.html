@@ -1,0 +1,44 @@
+<h1>Customers</h1>
+
+<table class="table table-striped table-hover">
+    <thead>
+    <tr>
+
+        <th></th>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let c of customers">
+        <td>
+            <input type="checkbox" (click)="select(c)"/>
+        </td>
+        <td>{{c.name}}</td>
+        <td>{{c.email}}</td>
+        <td>{{c.selected}}</td>
+    </tr>
+    </tbody>
+</table>
+
+<h3>Selected Values</h3>
+
+<table class="table table-striped table-hover">
+    <thead>
+    <tr>
+
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let c of selected">
+
+        <td>{{c.name}}</td>
+        <td>{{c.email}}</td>
+    </tr>
+    <tr *ngIf="selected.length == 0">
+        <td colspan="2"><em>nothing selected...</em></td>
+    </tr>
+    </tbody>
+</table>
