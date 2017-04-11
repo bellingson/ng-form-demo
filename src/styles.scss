@@ -6,6 +6,7 @@ form > div { margin-bottom: 10px; }
 form {
 
   max-width: 500px;
+  margin-bottom: 30px;
 
   label { font-size: 14px; font-weight: normal; display: block; }
 
@@ -20,6 +21,8 @@ form {
   div.error {
      color: red;
   }
+
+
 
 
 }
