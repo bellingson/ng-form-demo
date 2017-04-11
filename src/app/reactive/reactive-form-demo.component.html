@@ -31,8 +31,9 @@
 
     <button [disabled]="!form.valid" >Save</button>
 
-    <p>
-        Email: {{form.get('email').errors | json }}
-    </p>
-
 </form>
+
+
+<p>
+    Email: {{form.get('email').errors | json }}
+</p>

@@ -1,3 +1,39 @@
+<h1>Add Customer</h1>
+
+<form [formGroup]="form" (ngSubmit)="addCustomer()">
+    <div>
+        <label>First Name</label>
+        <input type="text" formControlName="firstName" required/>
+        <div *ngIf="form.get('firstName').touched && form.get('firstName').valid == false" class="error">
+            First name is required
+        </div>
+    </div>
+    <div><label>Last Name</label>
+        <input type="text" formControlName="lastName" required/>
+        <div *ngIf="form.get('lastName').touched && form.get('lastName').valid == false" class="error">
+            Last name is required
+        </div>
+    </div>
+    <div><label>Email</label>
+        <input type="text" formControlName="email" required/>
+        <div *ngIf="form.get('email').touched && form.get('email').errors && form.get('email').errors.required" class="error">
+            Email address is required
+        </div>
+        <div *ngIf="form.get('email').touched && form.get('email').errors && form.get('email').errors.email" class="error">
+            Email address is invalid
+        </div>
+    </div>
+
+    <div><label>Password</label>
+        <input type="password" formControlName="password" required/>
+    </div>
+
+
+    <button [disabled]="!form.valid" >Save</button>
+
+</form>
+
+
 <p>
-  reactive-validation works!
+    Email: {{form.get('email').errors | json }}
 </p>

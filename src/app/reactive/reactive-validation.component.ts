@@ -12,4 +12,11 @@ export class ReactiveValidationComponent implements OnInit {
   ngOnInit() {
   }
 
+    addCustomer() {
+
+        console.log(this.form.value);
+
+    }
+
+
 }
