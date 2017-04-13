@@ -15,8 +15,8 @@ export class ReactiveValidationComponent implements OnInit {
             firstName: ['', Validators.required],
             lastName: ['', Validators.required],
             email: ['', Validators.email ],
-            password: ['', this.validatePassword.bind(this) ],
-            confirm: ['', this.validateConfirm.bind(this)]
+            password: ['', [ Validators.required, this.validatePassword.bind(this)] ],
+            confirm: ['', [ Validators.required, this.validateConfirm.bind(this)] ]
         });
     }
 
@@ -32,15 +32,7 @@ export class ReactiveValidationComponent implements OnInit {
 
     validatePassword(ctrl: AbstractControl) : ValidationErrors | null {
 
-        if(this.form == null) {
-            return null;
-        }
-
-        if(this.form.get('password').value == '') {
-            return { required: true };
-        }
-
-        if(this.form.get('password').value.length < 4) {
+        if(ctrl.value.length < 4) {
             return { tooshort: true };
         }
 
@@ -53,7 +45,7 @@ export class ReactiveValidationComponent implements OnInit {
             return null;
         }
 
-        if(this.form.get('password').value != this.form.get('confirm').value) {
+        if(this.form.get('password').value != ctrl.value) {
             return { nomatch: true };
         }
 
