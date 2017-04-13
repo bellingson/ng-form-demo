@@ -57,12 +57,12 @@
     <div>
         <label>How did you hear about us?</label>
 
-        <select class="form-control" formControlName="referal">
-            <option *ngFor="let referal of referalSources" [value]="referal.id">{{referal.name}}</option>
+        <select class="form-control" formControlName="referral">
+            <option *ngFor="let referral of referralSources" [value]="referral.id">
+                {{referral.description}}
+            </option>
         </select>
     </div>
-
-
 
     <button [disabled]="!form.valid" >Save</button>
 

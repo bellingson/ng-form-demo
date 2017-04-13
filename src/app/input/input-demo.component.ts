@@ -13,13 +13,12 @@ export class InputDemoComponent implements OnInit {
 
     customer: any;
 
-    referalSources: Array<any> = [
-        { id: 1, name: 'Existing Customer' },
-        { id: 2, name: 'A Friend' },
-        { id: 3, name: 'Google' },
-        { id: 4, name: 'Facebook' },
-        { id: 5, name: 'Other' }
-
+    referralSources: Array<any> = [
+        { id: 1, description: 'Existing Customer' },
+        { id: 2, description: 'A Friend' },
+        { id: 3, description: 'Google' },
+        { id: 4, description: 'Facebook' },
+        { id: 5, description: 'Other' }
     ];
 
     constructor(fb: FormBuilder) {
@@ -31,7 +30,7 @@ export class InputDemoComponent implements OnInit {
             vegetarian: false,
             paleo: false,
             shirtSize: 'medium',
-            referal: 0
+            referral: 0
         });
     }
 
