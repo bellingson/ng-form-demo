@@ -9,12 +9,14 @@ import {ReactiveValueChangesComponent} from "./reactive/reactive-value-changes.c
 import {InputDemoComponent} from "./input/input-demo.component";
 import {InputListDemoComponent} from "./input/input-list-demo.component";
 import {ReactiveAsyncValidationComponent} from "./reactive/reactive-async-validation.component";
+import {TemplateDrivenValidationDemoComponent} from "./template-driven/template-driven-validation-demo.component";
 
 const routes: Routes = [
     { path: '', redirectTo: 'index', pathMatch: 'full' },
     { path: 'index', component: IndexComponent },
     { path: 'template-driven-demo', component: TemplateDrivenDemoComponent },
     { path: 'template-driven-update-demo', component: TemplateDrivenUpdateDemoComponent },
+    { path: 'template-driven-validation-demo', component: TemplateDrivenValidationDemoComponent },
     { path: 'reactive-demo', component: ReactiveFormDemoComponent },
     { path: 'reactive-update', component: ReactiveUpdateComponent },
     { path: 'reactive-validation', component: ReactiveValidationComponent },

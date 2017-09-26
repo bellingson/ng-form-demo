@@ -1,0 +1,54 @@
+
+<h1>Add Customer</h1>
+
+<form #f="ngForm" (ngSubmit)="addCustomer(f.value)">
+    <div>
+        <label>First Name</label><input #spy type="text" name="firstName" ngModel #firstName="ngModel" required/>
+
+        <div *ngIf="firstName.touched && !firstName.valid" class="error">
+            First name is required
+        </div>
+
+    </div>
+
+    <div>
+        <label>Last Name</label><input type="text" name="lastName" ngModel #lastName="ngModel" required/>
+        <div *ngIf="lastName.touched && !lastName.valid" class="error">
+            Last name is required
+        </div>
+    </div>
+    <div>
+        <label>Email</label><input type="text" name="email" ngModel #email="ngModel" required email/>
+        <div *ngIf="email.touched && !email.valid" class="error">
+            Email is required
+        </div>
+    </div>
+
+    <div>
+        <label>Password</label>
+        <input type="password" name="password" ngModel #password="ngModel" required minlength="4"/>
+
+        <div *ngIf="!password.valid && (password.touched || password.dirty)" class="error">
+
+            <div *ngIf="password.errors.required">
+                Password is required
+            </div>
+            <div *ngIf="password.errors.minlength">
+                Password must be at least 4 characters
+            </div>
+
+        </div>
+    </div>
+
+    <button [disabled]="!f.valid">Save</button>
+
+</form>
+
+
+<p>
+    Spy: {{spy.className}}
+</p>
+
+<p>
+    Value: {{f.value | json }}
+</p>
