@@ -10,6 +10,7 @@ import {InputDemoComponent} from "./input/input-demo.component";
 import {InputListDemoComponent} from "./input/input-list-demo.component";
 import {ReactiveAsyncValidationComponent} from "./reactive/reactive-async-validation.component";
 import {TemplateDrivenValidationDemoComponent} from "./template-driven/template-driven-validation-demo.component";
+import {TemplateDrivenAdvancedControlsComponent} from "./template-driven/template-driven-advanced-controls.component";
 
 const routes: Routes = [
     { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -17,6 +18,7 @@ const routes: Routes = [
     { path: 'template-driven-demo', component: TemplateDrivenDemoComponent },
     { path: 'template-driven-update-demo', component: TemplateDrivenUpdateDemoComponent },
     { path: 'template-driven-validation-demo', component: TemplateDrivenValidationDemoComponent },
+    { path: 'template-driven-advanced', component: TemplateDrivenAdvancedControlsComponent },
     { path: 'reactive-demo', component: ReactiveFormDemoComponent },
     { path: 'reactive-update', component: ReactiveUpdateComponent },
     { path: 'reactive-validation', component: ReactiveValidationComponent },

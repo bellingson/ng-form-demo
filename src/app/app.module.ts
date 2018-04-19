@@ -18,6 +18,7 @@ import { InputDemoComponent } from './input/input-demo.component';
 import { InputListDemoComponent } from './input/input-list-demo.component';
 import { ReactiveAsyncValidationComponent } from './reactive/reactive-async-validation.component';
 import {TemplateDrivenValidationDemoComponent} from "./template-driven/template-driven-validation-demo.component";
+import {TemplateDrivenAdvancedControlsComponent} from "./template-driven/template-driven-advanced-controls.component";
 
 
 
@@ -34,7 +35,8 @@ import {TemplateDrivenValidationDemoComponent} from "./template-driven/template-
     InputDemoComponent,
     InputListDemoComponent,
     ReactiveAsyncValidationComponent,
-    TemplateDrivenValidationDemoComponent
+    TemplateDrivenValidationDemoComponent,
+    TemplateDrivenAdvancedControlsComponent
   ],
   imports: [
     BrowserModule,

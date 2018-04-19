@@ -1,0 +1,47 @@
+<h1>Advanced Controls</h1>
+
+<form>
+
+  <h3>Select</h3>
+
+  <select name="state" [(ngModel)]="address.state">
+    <option *ngFor="let state of states" [value]="state.code">{{state.name}}</option>
+  </select>
+
+  <button (click)="updateSelect()">OK</button>
+
+  <br><br>
+
+  <h3>Checkbox</h3>
+
+  <div class="checkbox">
+
+    <label>
+
+      <input type="checkbox" name="agree" [(ngModel)]="agree" />
+      Agree to terms of service
+
+
+    </label>
+
+    <button (click)="updateCheckbox()">OK</button>
+
+  </div>
+
+
+
+
+  <h3>Radio</h3>
+
+  <div class="sizes">
+    <label *ngFor="let s of sizes" >
+      <input type="radio" [(ngModel)]="size" name="size" [value]="s"/>
+      {{s}}
+    </label>
+
+  </div>
+
+  <button (click)="updateRadio()">OK</button>
+
+
+</form>
