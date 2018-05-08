@@ -11,6 +11,7 @@ import {InputListDemoComponent} from "./input/input-list-demo.component";
 import {ReactiveAsyncValidationComponent} from "./reactive/reactive-async-validation.component";
 import {TemplateDrivenValidationDemoComponent} from "./template-driven/template-driven-validation-demo.component";
 import {TemplateDrivenAdvancedControlsComponent} from "./template-driven/template-driven-advanced-controls.component";
+import {NestedFormGroupComponent} from "./reactive/nested-form-group.component";
 
 const routes: Routes = [
     { path: '', redirectTo: 'index', pathMatch: 'full' },
@@ -24,6 +25,7 @@ const routes: Routes = [
     { path: 'reactive-validation', component: ReactiveValidationComponent },
     { path: 'reactive-async-validation', component: ReactiveAsyncValidationComponent },
     { path: 'reactive-value-changes', component: ReactiveValueChangesComponent },
+    { path: 'nested-form-group', component: NestedFormGroupComponent },
     { path: 'input-demo', component: InputDemoComponent },
     { path: 'input-list-demo', component: InputListDemoComponent }
 

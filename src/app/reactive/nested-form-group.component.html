@@ -1,0 +1,46 @@
+<h1>Update Customer</h1>
+
+
+<form [formGroup]="customerForm" (ngSubmit)="updateCustomer()">
+  <div>
+    <label>First Name</label>
+    <input type="text" formControlName="firstName" required/>
+  </div>
+  <div>
+    <label>Last Name</label>
+    <input type="text" formControlName="lastName" required/>
+  </div>
+  <div>
+    <label>Email</label>
+    <input type="text" formControlName="email" required/>
+  </div>
+
+  <div formGroupName="address">
+    <div>
+      <label>Address 1</label>
+      <input type="text" formControlName="address1" required/>
+    </div>
+    <div>
+      <label>Address 2</label>
+      <input type="text" formControlName="address2" />
+    </div>
+    <div>
+      <label>City</label>
+      <input type="text" formControlName="city" required/>
+    </div>
+    <div>
+      <label>State</label>
+      <input type="text" formControlName="state" required/>
+    </div>
+    <div>
+      <label>Zip</label>
+      <input type="text" formControlName="zip" required/>
+    </div>
+  </div>
+
+  <button>Save</button>
+
+</form>
+
+
+{{customerForm.value | json}}
